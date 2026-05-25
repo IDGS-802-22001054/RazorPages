@@ -1,0 +1,54 @@
+@page
+@model RazorPages.Pages.ImcModel
+@{
+    ViewData["Title"] = "Programa 1 - IMC";
+}
+
+<section class="exercise-shell">
+    <div class="exercise-header">
+        <p class="eyebrow">Programa 1</p>
+        <h1>Indice de Masa Corporal</h1>
+    </div>
+
+    <div class="exercise-layout">
+        <form method="post" class="exercise-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <label asp-for="PesoKg"></label>
+            <input asp-for="PesoKg" class="form-control" min="1" step="0.01" />
+            <span asp-validation-for="PesoKg" class="text-danger"></span>
+
+            <label asp-for="AlturaM"></label>
+            <input asp-for="AlturaM" class="form-control" min="0.1" step="0.01" />
+            <span asp-validation-for="AlturaM" class="text-danger"></span>
+
+            <button type="submit" class="btn btn-primary">Calcular IMC</button>
+        </form>
+
+        <aside class="result-panel">
+            @if (Model.HasResult)
+            {
+                <img class="recommendation-image" src="@Model.ImagePath" alt="@Model.Classification" />
+                <dl class="result-list">
+                    <div>
+                        <dt>IMC</dt>
+                        <dd>@Model.Imc.ToString("0.00")</dd>
+                    </div>
+                    <div>
+                        <dt>Clasificacion</dt>
+                        <dd>@Model.Classification</dd>
+                    </div>
+                </dl>
+                <p>@Model.Recommendation</p>
+            }
+            else
+            {
+                <p>Captura peso y altura para obtener la clasificacion y una recomendacion acorde al resultado.</p>
+            }
+        </aside>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

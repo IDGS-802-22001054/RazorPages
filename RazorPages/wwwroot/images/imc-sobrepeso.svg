@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Recomendacion para sobrepeso</title>
+  <desc id="desc">Cinta metrica, fruta y ruta de caminata.</desc>
+  <rect width="640" height="360" fill="#fff8e8"/>
+  <path d="M96 214c76-78 160-78 236 0s160 78 236 0" fill="none" stroke="#f2c94c" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="174" cy="144" r="52" fill="#eb5757"/>
+  <path d="M180 88c24-28 48-28 72-8" fill="none" stroke="#219653" stroke-width="10" stroke-linecap="round"/>
+  <rect x="360" y="116" width="170" height="80" rx="40" fill="#ffffff" stroke="#f2994a" stroke-width="8"/>
+  <path d="M390 156h112" stroke="#f2994a" stroke-width="8" stroke-linecap="round" stroke-dasharray="8 12"/>
+  <text x="148" y="305" fill="#1f2933" font-family="Arial, sans-serif" font-size="28" font-weight="700">Movimiento y porciones moderadas</text>
+</svg>

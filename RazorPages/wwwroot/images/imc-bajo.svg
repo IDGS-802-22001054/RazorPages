@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Recomendacion para peso bajo</title>
+  <desc id="desc">Plato nutritivo, vaso de agua y grafica ascendente.</desc>
+  <rect width="640" height="360" fill="#f3f8fb"/>
+  <circle cx="180" cy="180" r="92" fill="#ffffff" stroke="#2f80a7" stroke-width="8"/>
+  <path d="M128 180h104" stroke="#2f80a7" stroke-width="10" stroke-linecap="round"/>
+  <path d="M180 128v104" stroke="#2f80a7" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="152" cy="150" r="24" fill="#f2c94c"/>
+  <circle cx="208" cy="210" r="26" fill="#6fcf97"/>
+  <rect x="350" y="104" width="88" height="150" rx="14" fill="#d7eef8" stroke="#2f80a7" stroke-width="6"/>
+  <path d="M470 245l35-54 34 22 46-86" fill="none" stroke="#27ae60" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="320" y="305" fill="#1f2933" font-family="Arial, sans-serif" font-size="28" font-weight="700">Nutricion supervisada</text>
+</svg>

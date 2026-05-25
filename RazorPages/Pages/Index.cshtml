@@ -1,0 +1,36 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Lista de programas";
+}
+
+<section class="programs-hero">
+    <div>
+        <p class="eyebrow">ASP.NET Core Razor Pages</p>
+        <h1>Lista de programas</h1>
+        <p class="lead">Ejercicios implementados con formularios Razor, validacion del servidor y resultados calculados al enviar cada pagina.</p>
+    </div>
+</section>
+
+<section class="program-grid" aria-label="Programas disponibles">
+    <a class="program-card" asp-page="/Imc">
+        <span class="program-number">01</span>
+        <h2>Indice de Masa Corporal</h2>
+        <p>Calcula el IMC, clasifica el resultado y muestra una recomendacion visual.</p>
+    </a>
+    <a class="program-card" asp-page="/Cesar">
+        <span class="program-number">02</span>
+        <h2>Cifrado Cesar</h2>
+        <p>Codifica y decodifica mensajes usando el alfabeto latino de 25 letras.</p>
+    </a>
+    <a class="program-card" asp-page="/Binomio">
+        <span class="program-number">03</span>
+        <h2>Expresion (ax + by)^n</h2>
+        <p>Evalua la expresion con los valores capturados para a, b, x, y, n.</p>
+    </a>
+    <a class="program-card" asp-page="/Arreglo">
+        <span class="program-number">04</span>
+        <h2>Arreglo aleatorio</h2>
+        <p>Genera 20 enteros y obtiene suma, promedio, moda y mediana.</p>
+    </a>
+</section>

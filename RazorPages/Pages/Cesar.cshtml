@@ -1,0 +1,51 @@
+@page
+@model RazorPages.Pages.CesarModel
+@{
+    ViewData["Title"] = "Programa 2 - Cifrado Cesar";
+}
+
+<section class="exercise-shell">
+    <div class="exercise-header">
+        <p class="eyebrow">Programa 2</p>
+        <h1>Cifrado Cesar</h1>
+    </div>
+
+    <div class="exercise-layout">
+        <form method="post" class="exercise-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <label asp-for="Message"></label>
+            <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+            <span asp-validation-for="Message" class="text-danger"></span>
+
+            <label asp-for="Shift"></label>
+            <input asp-for="Shift" class="form-control" min="1" />
+            <span asp-validation-for="Shift" class="text-danger"></span>
+
+            <label asp-for="Mode"></label>
+            <select asp-for="Mode" class="form-select">
+                <option value="encode">Codificar</option>
+                <option value="decode">Decodificar</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">Procesar mensaje</button>
+        </form>
+
+        <aside class="result-panel">
+            <p class="alphabet">A B C D E F G H I J K L M N O P Q R S T U V X Y Z</p>
+            @if (Model.HasResult)
+            {
+                <h2>Resultado</h2>
+                <pre class="message-output">@Model.Result</pre>
+            }
+            else
+            {
+                <p>Usa un desplazamiento positivo. Los caracteres que no existen en el alfabeto latino indicado se conservan.</p>
+            }
+        </aside>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

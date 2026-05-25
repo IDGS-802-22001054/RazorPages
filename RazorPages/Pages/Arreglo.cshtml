@@ -1,0 +1,55 @@
+@page
+@model RazorPages.Pages.ArregloModel
+@{
+    ViewData["Title"] = "Programa 4 - Arreglo";
+}
+
+<section class="exercise-shell">
+    <div class="exercise-header">
+        <p class="eyebrow">Programa 4</p>
+        <h1>Arreglo aleatorio</h1>
+    </div>
+
+    <div class="toolbar-form">
+        <a class="btn btn-primary" asp-page="/Arreglo">Generar nuevo arreglo</a>
+    </div>
+
+    <div class="array-section">
+        <h2>Arreglo aleatorio</h2>
+        <div class="number-grid">
+            @foreach (var number in Model.Numbers)
+            {
+                <span>@number</span>
+            }
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <article>
+            <h2>Suma</h2>
+            <p>@Model.Sum</p>
+        </article>
+        <article>
+            <h2>Promedio</h2>
+            <p>@Model.Average.ToString("0.00")</p>
+        </article>
+        <article>
+            <h2>Moda</h2>
+            <p>@Model.ModeText</p>
+        </article>
+        <article>
+            <h2>Mediana</h2>
+            <p>@Model.Median.ToString("0.##")</p>
+        </article>
+    </div>
+
+    <div class="array-section">
+        <h2>Arreglo ordenado</h2>
+        <div class="number-grid">
+            @foreach (var number in Model.SortedNumbers)
+            {
+                <span>@number</span>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,67 @@
+@page
+@model RazorPages.Pages.BinomioModel
+@{
+    ViewData["Title"] = "Programa 3 - Binomio";
+}
+
+<section class="exercise-shell">
+    <div class="exercise-header">
+        <p class="eyebrow">Programa 3</p>
+        <h1>Evaluar (ax + by)^n</h1>
+    </div>
+
+    <div class="exercise-layout">
+        <form method="post" class="exercise-form compact-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <label asp-for="A"></label>
+            <input asp-for="A" class="form-control" step="0.01" />
+
+            <label asp-for="B"></label>
+            <input asp-for="B" class="form-control" step="0.01" />
+
+            <label asp-for="X"></label>
+            <input asp-for="X" class="form-control" step="0.01" />
+
+            <label asp-for="Y"></label>
+            <input asp-for="Y" class="form-control" step="0.01" />
+
+            <label asp-for="N"></label>
+            <input asp-for="N" class="form-control" min="0" max="50" />
+            <span asp-validation-for="N" class="text-danger"></span>
+
+            <button type="submit" class="btn btn-primary">Evaluar</button>
+        </form>
+
+        <aside class="result-panel">
+            @if (Model.HasResult)
+            {
+                <dl class="result-list">
+                    <div>
+                        <dt>ax + by</dt>
+                        <dd>@Model.BaseValue.ToString("0.####")</dd>
+                    </div>
+                    <div>
+                        <dt>Resultado</dt>
+                        <dd>@Model.Result.ToString("0.####")</dd>
+                    </div>
+                </dl>
+                <h2>Desarrollo por binomio</h2>
+                <ol class="term-list">
+                    @foreach (var term in Model.Terms)
+                    {
+                        <li>@term</li>
+                    }
+                </ol>
+            }
+            else
+            {
+                <p>Captura los valores de a, b, x, y, n para evaluar la expresion con la igualdad del binomio.</p>
+            }
+        </aside>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

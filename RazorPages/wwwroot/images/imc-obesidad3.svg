@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Recomendacion para obesidad grado III</title>
+  <desc id="desc">Atencion prioritaria con simbolo de salud y ruta de tratamiento.</desc>
+  <rect width="640" height="360" fill="#fff1f2"/>
+  <circle cx="196" cy="166" r="92" fill="#ffffff" stroke="#b91c1c" stroke-width="8"/>
+  <path d="M196 112v108M142 166h108" stroke="#b91c1c" stroke-width="18" stroke-linecap="round"/>
+  <path d="M340 228c38-80 96-116 174-118" fill="none" stroke="#146c79" stroke-width="14" stroke-linecap="round" stroke-dasharray="2 24"/>
+  <path d="M508 92l38 18-36 24" fill="none" stroke="#146c79" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="96" y="310" fill="#1f2933" font-family="Arial, sans-serif" font-size="27" font-weight="700">Valoracion medica prioritaria</text>
+</svg>
